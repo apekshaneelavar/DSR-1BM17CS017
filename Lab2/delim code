@@ -1,0 +1,11 @@
+getwd()
+setwd("C:/Datasets")
+getwd()
+grep(".csv",list.files(),value=T)
+churn_delim<-read.delim("Churn_Modelling.csv - Churn_Modelling.csv.csv",sep=',')
+churn_delim
+colnames(churn_delim)
+vec<-c(10,20,30,40,50)
+new_churn<-churn_delim
+new_churn<-cbind(churn_delim,new_col=vec)
+colnames(new_churn)

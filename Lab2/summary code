@@ -1,0 +1,12 @@
+list.files()
+getwd()
+setwd("C:/Datasets")
+getwd()
+grep(".csv",list.files(),value=T)
+bank_data<-read.csv("bank-data.csv - bank-data.csv.csv")
+bank_data
+summary(bank_data)
+ncol(bank_data)
+nrow(bank_data)
+plot(x=bank_data$age,y=bank_data$children)
+colnames(bank_data)

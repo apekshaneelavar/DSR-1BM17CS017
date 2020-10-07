@@ -1,0 +1,11 @@
+getwd()
+setwd("C:/Datasets")
+dataset<-read.delim("Perfume_Volumes_2_Sample.csv - Perfume_Volumes_2_Sample.csv.csv",sep=',')
+dataset
+str(dataset)
+Machine_3<-seq(1,100)
+Machine_3
+new_dataset<-cbind(dataset,Machine_3)
+new_dataset
+colnames(new_dataset)
+write.csv(new_dataset,'export_Data.csv',row.names = FALSE)

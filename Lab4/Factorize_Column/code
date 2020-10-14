@@ -1,0 +1,23 @@
+setwd("C:/Datasets")
+bk<-read.csv("Churn_Modelling.csv - Churn_Modelling.csv.csv")
+bk
+nrow(bk)
+colnames(bk)
+class(bk)
+str(bk)
+bk$EstimatedSalary
+min(bk$EstimatedSalary)
+max(bk$EstimatedSalary)
+salary<-vector(mode="character",length=length(bk$income))
+salary
+salary[bk$EstimatedSalary<10000]<-"Low"
+salary
+salary[bk$EstimatedSalary>=10000 & bk$EstimatedSalary < 100000]<-"middle"
+salary[bk$EstimatedSalary>100000]<-"High"
+salary
+level<-factor(salary,levels=c("Low","middle","High"),ordered=TRUE)
+level
+bk<-cbind(bk,level)
+bk
+bk$level
+write.csv(bk,'salary.csv',row.names = FALSE)

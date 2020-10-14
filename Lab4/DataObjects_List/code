@@ -1,0 +1,6 @@
+int_num=c(100,150,200)
+str=c("Red","White","Black")
+real_num=c(23.3,44.5,89.0)
+new_list=list(int_num,str,real_num)
+names(new_list)=c("Numeric numbers","String","Real numbers")
+new_list
